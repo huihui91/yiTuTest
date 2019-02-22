@@ -126,10 +126,16 @@
               this.context_bak.beginPath()
               this.clearContext()
               this.context_bak.moveTo(this.startX, this.startY)
+              //1.使用lineTo api
               this.context_bak.lineTo(x, this.startY)
               this.context_bak.lineTo(x, y)
               this.context_bak.lineTo(this.startX, y)
               this.context_bak.lineTo(this.startX, this.startY)
+
+              //2.使用rect api
+              // let w=x-this.startX;
+              // let h=y-this.startY
+              // this.context_bak.rect(this.startX,this.startY,w,h)
               this.context_bak.stroke()
             }
             //直线
